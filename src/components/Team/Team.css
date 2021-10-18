@@ -1,0 +1,44 @@
+.team-container{
+    height: 30vh;
+    width: 100%;
+    
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.team-container h1{
+    color: #7dc9a5;
+    border-bottom: 5px solid #7dc9a5;
+    width: 50%;
+    text-align: center;
+}
+.members{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    width: 60%;
+    justify-items: center;
+    background-color: white;
+    padding: 30px;
+    height: 100%;
+    align-content: center;
+    overflow: scroll;
+    
+}
+.member-item img{
+    height: 100px;
+    width: 140px;
+    
+    
+}
+.member-item h3:hover{
+    color: #7dc9a5;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 800px) {
+    .members{
+        grid-template-columns: repeat(1,1fr);
+        
+    }
+}

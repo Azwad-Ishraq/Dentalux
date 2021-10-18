@@ -1,6 +1,14 @@
-# Getting Started with Create React App
+# Dentalux Website. Its a dental hospital website
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project was created using raw css and react. any css framework was not used for this project [Create React App](https://assignment10-c3120.web.app/).
+
+## Some key points of the Project
+1. This is a demo website of a dental hospital
+2. It is Single Page Application
+3. User can log in and sign up using email and password in this website
+4. Also User can sign in or sign up using google 
+5. When user will click on service details they can see the service details in another Route
+
 
 ## Available Scripts
 

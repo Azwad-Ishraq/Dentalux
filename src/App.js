@@ -1,23 +1,68 @@
-import logo from './logo.svg';
+
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import './App.css';
+import Contact from './components/Contact/Contact';
+
+import Home from './components/Home/Home';
+import Login from './components/Login/Login';
+import Navbar from './components/Navbar/Navbar';
+import NotFound from './components/NotFound/NotFound';
+import PrivateRoute from './components/PrivateRoute/PrivateRoute';
+
+
+import Profile from './components/Profile/Profile';
+import Register from './components/Register/Register';
+import ServiceDetail from './components/ServiceDetail/ServiceDetail';
+import Services from './components/Services/Services';
+import AuthProvider from './context/AuthProvider';
+import initializeAuthentication from './Firebase/Firebase.init';
+initializeAuthentication()
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+     <AuthProvider>
+     <BrowserRouter>
+      <Navbar></Navbar>
+      
+      
+
+
+      <Switch>
+      <PrivateRoute path='/contact'>
+          <Contact></Contact>
+         </PrivateRoute>
+          <Route exact path='/'>
+            <Home></Home>
+          </Route>
+          <Route  path='/home'>
+            <Home></Home>
+          </Route>
+          <Route  path='/services'>
+            <Services></Services>
+          </Route>
+          <Route  path='/register'>
+            <Register></Register>
+          </Route>
+          <Route  path='/login'>
+            <Login></Login>
+          </Route>
+          <Route  path='/profile'>
+            <Profile></Profile>
+          </Route>
+          <PrivateRoute  path='/service/:serviceId'>
+            <ServiceDetail></ServiceDetail>
+          </PrivateRoute>
+
+          <Route  path='*'>
+           <NotFound></NotFound>
+          </Route>
+         
+
+
+      </Switch>
+      </BrowserRouter>
+     </AuthProvider>
     </div>
   );
 }

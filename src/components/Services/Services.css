@@ -1,0 +1,27 @@
+.services-container{
+    
+    width: 60%;
+    text-align: center;
+    margin: 0 auto;
+    margin-top: 100px;
+    
+}
+.services-container h1{
+    font-size: 40px;
+    margin-bottom: 40px;
+    color: #7dc9a5;
+    border-bottom: 5px solid #7dc9a5;
+}
+.services{
+    
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-row-gap: 30px;
+    grid-column-gap: 30px;
+}
+@media screen and (max-width: 1200px) {
+    .services{
+        grid-template-columns: repeat(1,1fr);
+    }
+}
