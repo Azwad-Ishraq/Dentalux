@@ -31,3 +31,11 @@
     width: 100%;
     flex-direction: column;
 }
+.footer-text img{
+    height: 50px;
+    width: 50px;
+    margin-left: 20px;
+}
+.social-icons{
+    margin-top: 50px;
+}

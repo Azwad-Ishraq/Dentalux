@@ -1,5 +1,8 @@
 import React from 'react';
 import './Footer.css'
+import facebook from './facebook.png'
+import insta from './instagram.png'
+import twit from './twitter.png'
 const Footer = () => {
     return (
         <footer className='footer'>
@@ -11,6 +14,11 @@ const Footer = () => {
             <div className="footer-text">
             <h1>THE BEST IN MODERN DENTIRSTRY</h1>
             <button className='header-btn'>Make an Appointment </button>
+           <div className="social-icons">
+           <img src={facebook} alt=""/>
+            <img src={insta} alt=""/>
+            <img src={twit} alt=""/>
+           </div>
             </div>
 
 

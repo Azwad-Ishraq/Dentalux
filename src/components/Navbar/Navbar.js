@@ -36,7 +36,7 @@ const Navbar = () => {
                 }
                 {
                     user.email ? 
-                    <NavLink to='/home' className='nav-link'><button className='nav-link-btn' onClick={logOut}>Logout</button></NavLink>
+                    <button className='nav-link nav-link-btn' onClick={logOut}>Logout</button>
                     :
                     <span></span>
                 }
