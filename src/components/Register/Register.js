@@ -33,6 +33,7 @@ const Register = () => {
         <div className='register'>
             
             <form onSubmit={createNewUser}  className='form'>
+                <h1>Please Register</h1>
                 <input onBlur={handleEmailchange} type="email" placeholder='Enter Your Email' />
                 <input onBlur={handlePasswordlchange} type="password" placeholder='Enter Your Password'/>
                 <Link className='reg-link' to='/login'>Already Have an Account?</Link>

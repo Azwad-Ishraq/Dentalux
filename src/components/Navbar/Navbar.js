@@ -6,6 +6,7 @@ import useFirebase from '../../hooks/useFirebase';
 import menu  from '../../menu.png'
 const Navbar = () => {
     const {user,logOut} = useFirebase()
+    const {displayName} = user;
     const toggleMenu = () =>{
         const navlinks = document.getElementById('nav-links')
         navlinks.classList.toggle('nav-links-active')
@@ -37,6 +38,12 @@ const Navbar = () => {
                 {
                     user.email ? 
                     <button className='nav-link nav-link-btn' onClick={logOut}>Logout</button>
+                    :
+                    <span></span>
+                }
+                {
+                    user.email? 
+                    <NavLink className='nav-link' to='/profile'>Hello,{displayName}</NavLink>
                     :
                     <span></span>
                 }

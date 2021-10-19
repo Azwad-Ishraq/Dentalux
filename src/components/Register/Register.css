@@ -48,6 +48,9 @@
     .reg-btn{
         width: 100%;
     }
+    .form{
+        height: 40%;
+    }
 }
 @media screen and (max-width: 700px) {
     .form{

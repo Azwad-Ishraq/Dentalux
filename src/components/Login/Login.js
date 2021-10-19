@@ -31,6 +31,7 @@ const Login = () => {
         <div className='register'>
             
         <form onSubmit={signInUser} className='form'>
+            <h1>Please Login</h1>
             <input onBlur={handleEmailchange} type="email" placeholder='Enter Your Email' />
             <input onBlur={handlePasswordlchange} type="password" placeholder='Enter Your Password'/>
             <Link className='reg-link' to='/login'>Not a member?Signup Now</Link>
