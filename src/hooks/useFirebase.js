@@ -6,7 +6,9 @@ import { useEffect, useState } from "react";
 const useFirebase = () => {
     const [user, setUser] = useState({})
     const [isLoading,setIsloading] = useState(true)
+    
     const googleProvider = new GoogleAuthProvider();
+
     const auth = getAuth()
 
 
@@ -14,11 +16,8 @@ const useFirebase = () => {
     const signInUsingGoogle = () => {
         setIsloading(true)
 
-        signInWithPopup(auth, googleProvider)
-            .then(result => {
-                const user = result.user
-                console.log(user)
-            })
+       return signInWithPopup(auth, googleProvider)
+           
             .finally(()=> setIsloading(false))
     }
     const logOut = ()=> {

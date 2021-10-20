@@ -7,6 +7,9 @@ import menu  from '../../menu.png'
 const Navbar = () => {
     const {user,logOut} = useFirebase()
     const {displayName} = user;
+
+
+    // function for toggle menu to show the link in mobile devices
     const toggleMenu = () =>{
         const navlinks = document.getElementById('nav-links')
         navlinks.classList.toggle('nav-links-active')

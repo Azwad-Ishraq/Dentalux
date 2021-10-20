@@ -8,7 +8,7 @@
 }
 .form{
     background-color: #aedec8;
-    height: 30%;
+    height: 40%;
     width: 30%;
     display: flex;
     flex-direction: column;
@@ -44,12 +44,12 @@
     text-decoration: underline;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 950px) {
     .reg-btn{
         width: 100%;
     }
     .form{
-        height: 40%;
+        height: 50%;
     }
 }
 @media screen and (max-width: 700px) {

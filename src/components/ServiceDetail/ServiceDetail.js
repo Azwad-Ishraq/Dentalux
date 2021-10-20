@@ -23,17 +23,6 @@ const ServiceDetail = () => {
     },[Services])
 
     
-   
-    
-   
-
-
-       
-  
-
-    
-
-
 
     return (
         <div className='service-detail-container'>
