@@ -1,0 +1,41 @@
+.blog-item{
+        background-color: gray;
+        position: relative;
+}
+.blog-item img{
+    height: 100%;
+    width: 100%;
+   
+}
+.blog-text{
+    position: absolute;
+    top: 0;
+    padding: 20px;
+    text-align:left;
+    background-color: #7dc9a56c;
+    height: 30%;
+    width: 100%;
+    color: rgb(255, 255, 255);
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    transition: .3s;
+}
+.blog-text h1{
+    margin: 0;
+    font-size: 30px;
+}
+.blog-text:hover{
+    height: 50%;
+}
+
+@media screen and (max-width: 1200px) {
+    .blog-text h1{
+        font-size: 25px;
+    }
+}
+@media screen and (max-width: 600px) {
+    .blog-text h1{
+        font-size: 15px;
+    }
+}
